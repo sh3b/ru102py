@@ -177,6 +177,8 @@ run a specific test:
 
     $ pytest -k test_set_get
 
+    $ pytest tests/test_hello.py
+
 ## FAQ
 
 ### Why do I get a "Python 3.8 is not installed!" error when I try to run `make` commands?
