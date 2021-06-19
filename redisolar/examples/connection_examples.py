@@ -5,6 +5,9 @@ from rediscluster import RedisCluster
 
 def connection_examples():
     # Connect to a standard Redis deployment.
+    # This client instance is thread safe and maintains a pool of TCP connections to redis.
+    # The only time you shouldn't use an instance of the Redis class to connect is if your
+    # Redis deployment runs in a high availability configuration like Sentinel or Cluster.
     client = redis.Redis("localhost", port=6379, decode_responses=True,
                          max_connections=20)
 
